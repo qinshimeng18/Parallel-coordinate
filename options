@@ -1,0 +1,190 @@
+data1=[
+    {
+        "value": 4636,
+        "name": "Agric. & Nat. Res. Cons"
+    },
+    {
+        "value": 3459,
+        "name": "Architecture"
+    },
+    {
+        "value": 167,
+        "name": "Area, Eth. & Multidiscip. Studies"
+    },
+    {
+        "value": 16808,
+        "name": "Arts: Visual & Performing"
+    },
+    {
+        "value": 27752,
+        "name": "Business"
+    },
+    {
+        "value": 4724,
+        "name": "Commun, Fam., & Personal Svcs"
+    },
+    {
+        "value": 7150,
+        "name": "Communications"
+    },
+    {
+        "value": 7556,
+        "name": "Comp. Sci. & Mathematics"
+    },
+    {
+        "value": 14629,
+        "name": "Education"
+    },
+    {
+        "value": 3617,
+        "name": "Eng. Tech. & Drafting"
+    },
+    {
+        "value": 28355,
+        "name": "Engineering"
+    },
+    {
+        "value": 3627,
+        "name": "English & Foreign Lang."
+    },
+    {
+        "value": 6652,
+        "name": "Health Admin. & Assisting"
+    },
+    {
+        "value": 56709,
+        "name": "Health Sci. & Techno."
+    },
+    {
+        "value": 1128,
+        "name": "Philosophy, Religion, & Theology"
+    },
+    {
+        "value": 1697,
+        "name": "Repair, Production, & Construction"
+    },
+    {
+        "value": 23526,
+        "name": "Sciences: Biological & Physical"
+    },
+    {
+        "value": 22912,
+        "name": "Social Sciences & Law"
+    }
+],data2 = [
+    {
+        "name": "Agric. & Nat. Res. Cons",
+        "value": 1882
+    },
+    {
+        "name": "Architecture",
+        "value": 751
+    },
+    {
+        "name": "Area, Eth. & Multidiscip. Studies",
+        "value": 37
+    },
+    {
+        "name": "Arts: Visual & Performing",
+        "value": 8505
+    },
+    {
+        "name": "Business",
+        "value": 11709
+    },
+    {
+        "name": "Commun, Fam., & Personal Svcs",
+        "value": 1173
+    },
+    {
+        "name": "Communications",
+        "value": 3110
+    },
+    {
+        "name": "Comp. Sci. & Mathematics",
+        "value": 2145
+    },
+    {
+        "name": "Education",
+        "value": 4421
+    },
+    {
+        "name": "Eng. Tech. & Drafting",
+        "value": 1152
+    },
+    {
+        "name": "Engineering",
+        "value": 10848
+    },
+    {
+        "name": "English & Foreign Lang.",
+        "value": 1692
+    },
+    {
+        "name": "Health Admin. & Assisting",
+        "value": 1585
+    },
+    {
+        "name": "Health Sci. & Techno.",
+        "value": 23223
+    },
+    {
+        "name": "Philosophy, Religion, & Theology",
+        "value": 314
+    },
+    {
+        "name": "Repair, Production, & Construction",
+        "value": 984
+    },
+    {
+        "name": "Sciences: Biological & Physical",
+        "value": 13413
+    },
+    {
+        "name": "Social Sciences & Law",
+        "value": 7092
+    }
+],
+option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'left',
+        data:['直达','营销广告','搜索引擎','邮件营销','联盟广告','视频广告','百度','谷歌','必应','其他']
+    },
+    series: [
+        {
+            roseType:'area',
+            name:'number',
+            type:'pie',
+            radius: [0, '30%'],
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:data1
+        },
+        {
+            roseType:'area',
+            name:'good',
+            type:'pie',
+            radius: ['30%', '60%'],
+
+            label: {
+                normal: {
+                    position: false
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:data2
+        }
+    ]
+};
